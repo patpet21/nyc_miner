@@ -102,13 +102,13 @@ function refreshData(){
     var baseNum = 0;
     contractBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = stripDecimals(rawStr, 3) + ' Bozo';
+        balanceElem.textContent = stripDecimals(rawStr, 3) + ' NYC';
     });
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' Bozo';
+        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' NYC';
     });
 
     lastHatch(currentAddr,function(lh){

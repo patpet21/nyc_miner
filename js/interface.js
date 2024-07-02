@@ -1,5 +1,5 @@
-var minersAddr = '0x4Eb2b0cCD5ACA33677B1C0c69f2Ff853D9317617';
-var tokenAddr = '0x772dEa31167EE5C7dF94cAAF2516b7e8E70CCd6c';
+var minersAddr = '0x648D8Cfcaf5466832d691A85CE603e854EFd27AD';
+var tokenAddr = '0xba8052b1f26bffF35a13B48ADFF2fe558e0E0951';
 var minersAbi = 
 [
 	{
@@ -642,10 +642,10 @@ function userBalance(callback){
 
 function buyEggs(ref, trx, callback){
 	if(+trx > +usrBal) {
-		alert("You don't have " + trx + " Bozo in your wallet");
+		alert("You don't have " + trx + " NYC in your wallet");
 	}
 	else if(+trx > +spend) {
-		alert("Approve spending " + trx + " Bozo first");
+		alert("Approve spending " + trx + " NYC first");
 	} else {
 			minersContract.methods.buyEggs(ref, web3.utils.toWei(trx)).send({ from:currentAddr }).then(result => {
         callback();
